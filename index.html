@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoリスト</title>
+    <link rel="stylesheet" href="styles/app.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>ToDoリスト</h1>
+        </header>
+        
+        <main class="app-main">
+            <!-- Task Input Component -->
+            <div class="task-input">
+                <input type="text" id="task-input" placeholder="新しいタスクを入力..." maxlength="500" aria-label="新しいタスクを入力">
+                <button type="button" id="add-task-btn" aria-label="タスクを追加">追加</button>
+            </div>
+            
+            <!-- Task List Component -->
+            <div class="task-list">
+                <ul id="tasks-container" role="list">
+                    <!-- TaskItem components will be rendered here -->
+                </ul>
+                <div class="task-count" aria-live="polite">
+                    <span id="total-count">0</span>個のタスク
+                </div>
+            </div>
+        </main>
+    </div>
+    
+            <script type="module" src="src/app.js"></script>
+</body>
+</html>

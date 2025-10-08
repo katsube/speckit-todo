@@ -1,50 +1,41 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+- Version change: none → 1.0.0
+- Added principles: All 5 core principles (Feature-First, User Story Prioritization, Test-First (NON-NEGOTIABLE), Independent Deployment, Template-Driven Development)
+- Added sections: Quality Standards, Development Workflow
+- Templates requiring updates: ✅ updated plan-template.md, spec-template.md, tasks-template.md
+- Follow-up TODOs: none
+-->
+
+# SpecKit Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Feature-First
+Every development cycle begins with a complete feature specification that defines user value and acceptance criteria. Features MUST be documented in spec.md with prioritized user stories (P1, P2, P3) before any implementation planning begins. Each feature delivers measurable business value and can be independently validated.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. User Story Prioritization  
+All features MUST be decomposed into independently testable user stories with explicit priorities. P1 stories form the MVP; P2 and P3 stories add incremental value. Each story MUST be implementable, deployable, and demonstrable as a standalone increment that delivers user value.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Test-First (NON-NEGOTIABLE)
+TDD is mandatory: Tests written → User approved → Tests fail → Then implement. Red-Green-Refactor cycle strictly enforced. Every user story MUST have acceptance tests before implementation begins. Contract tests required for API changes, integration tests for inter-service communication.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Independent Deployment
+Each user story MUST be independently deployable without breaking existing functionality. No story should depend on parallel completion of another story. Implementation MUST support incremental rollouts with feature flags or graceful degradation when components are unavailable.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Template-Driven Development
+All artifacts (specs, plans, tasks, checklists) MUST follow standardized templates. Templates ensure consistency, completeness, and quality gates. Deviations from templates require explicit justification and constitution compliance verification.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Quality Standards
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+Documentation MUST be written for non-technical stakeholders and avoid implementation details. Requirements MUST be testable, measurable, and technology-agnostic. All placeholder tokens ([NEEDS CLARIFICATION]) MUST be resolved before proceeding to implementation planning.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+## Development Workflow
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+Feature specification → Implementation planning → Task breakdown → Implementation. Each phase has quality gates that MUST pass before proceeding. Constitution compliance verified at each transition. All changes tracked with semantic versioning and impact analysis.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution supersedes all other development practices. Amendments require version update with semantic versioning, impact analysis, and template synchronization. All feature reviews MUST verify constitutional compliance. Violations require justification in complexity tracking or principle amendment through formal process.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-10-07 | **Last Amended**: 2025-10-07
